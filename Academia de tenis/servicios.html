@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Academia de Tenis</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Menú principal */
+    nav {
+      background-color: #0a192f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      flex-wrap: wrap; /* permite que se ajuste en móviles */
+    }
+
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    nav a:hover::after {
+      content: "🎾";
+      position: absolute;
+      right: -25px;
+      font-size: 18px;
+    }
+
+    /* Títulos */
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffd700;
+      text-shadow: 1px 1px #000;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    /* Sección servicios */
+    .services {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(13, 27, 42, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .service-card {
+      background: #1b263b;
+      border-left: 6px solid #ffd700;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(255, 215, 0, 0.4);
+    }
+
+    .service-card h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #f1f1f1;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffd700;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+/* Tarjetas: fondo, sombras y transición */
+				.card{background:var(--card); border-radius:12px; box-shadow:0 9px 30¿px rgba(36,36,36,0.06); padding:22px; min-height:120px; transition:transform .18s ease, box-shadow .18s ease}
+
+				/* Encabezado dentro de la tarjeta: color de acento */
+				.card h3{margin-top:0; color:#ffd700;}
+
+				/* Texto dentro de la tarjeta: color y interlineado */
+				.card p{color:var(--muted); line-height:1.5}
+
+				/* Hover en tarjeta: elevar y aumentar sombra */
+				.card:hover{transform:translateY(-6px); box-shadow:0 18px 50px rgba(36,36,36,0.08)}
+
+				/* Pie de página: espaciado y centrado */
+				footer{background:transparent; padding:28px 20px; text-align:center}
+
+				/* Iconos sociales: tamaño, filtro y transición */
+				.socials img{width:40px; height:40px; margin:0 8px; filter:grayscale(40%); transition:filter .15s ease, transform .15s ease}
+
+				/* Hover en iconos sociales: color y elevación */
+				.socials img:hover{filter:none; transform:translateY(-3px)}
+
+				/* Texto legal en el footer: tamaño y color */
+				.legal{margin-top:12px; font-size:13px; color:#8a8a8a}
+
+				/* Media query para pantallas grandes: ajustar padding y tamaño de marca */
+				@media(min-width:900px){ .hero{padding:96px 40px} .brand{font-size:24px} }
+/* Imagen izquierda */
+.menu-icon {
+  position: absolute;
+  left: 10px;   /* coordenada desde el borde izquierdo */
+  top: 3%;     /* centrada verticalmente */
+  transform: translateY(-50%); /* ajuste exacto al centro */
+    transform: translateY(-5%);
+
+  width: 50px;
+  height: 50px;
+}
+
+/* Imagen derecha */
+.menu-icon2 {
+  position: absolute;
+  right: 10px;  /* coordenada desde el borde derecho */
+  top: 3%;
+  transform: translateY(-50%);
+  transform: translateY(-5%);
+  width: 50px;
+  height: 50px;
+}
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 20px; /* letras más grandes */
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover con pelota de tenis */
+nav a:hover {
+  color: #ffd700;
+}
+
+nav a:hover::after {
+  content: "🎾"; /* pelota de tenis emoji */
+  position: absolute;
+  right: -40px; /* espacio a la derecha */
+  font-size: 22px;
+}
+
+    /* Imágenes fluidas */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Tipografía adaptativa */
+h1, h2, h3 {
+  font-size: clamp(20px, 2.5vw, 32px);
+}
+p, li {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+
+/* Ajustes para tablets y phablets */
+@media (max-width: 992px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 8px;
+  }
+
+  .services {
+    padding: 20px;
+  }
+}
+
+/* Ajustes para móviles actuales (pantallas grandes y notch) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 15px;
+    margin: 6px 0;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}
+
+/* Ajustes para móviles muy pequeños */
+@media (max-width: 480px) {
+  nav a {
+    font-size: 14px;
+  }
+
+  .services {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .service-card {
+    margin: 10px 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+ <header>
+		<!-- Función: Nav - enlaces a secciones y páginas principales -->
+		<nav>
+  <img src="cancha.jpg" alt="Tenis Izquierda" class="menu-icon" />
+  
+  <a href="index.html">Inicio</a>
+  <a href="mas_sobre_nosotros.html">Conoce Más</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="contactos.html">Contacto</a>
+  
+  <img src="cancha.jpg" alt="Tenis Derecha" class="menu-icon2" />
+</nav>
+
+	</header>
+
+  <main>
+    <section class="services">
+      <h2>Servicios</h2>
+
+      <div class="service-card">
+        <h3>Entrenamiento Personalizado</h3>
+        <p>Programas diseñados según el nivel y objetivos de cada jugador.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Clases para Niños y Jóvenes</h3>
+        <p>Formación divertida y disciplinada para desarrollar habilidades desde temprana edad.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Preparación Competitiva</h3>
+        <p>Entrenamiento intensivo para torneos locales, nacionales e internacionales.</p>
+      </div>
+
+      <p class="price">Para cotizar costos ponerse en contacto con nosotros.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Academia de Tenis. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
